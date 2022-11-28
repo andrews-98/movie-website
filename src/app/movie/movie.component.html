@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="movie-container">
+    <div class="top">
+        <div class="left">
+            <div class="title_name">{{movie?.name}}</div>
+            <div class="rating">
+                <ngb-rating [rate]="movie.rating"></ngb-rating>
+                <span>{{movie.rating}}</span>
+            </div>
+            <div class="cover">
+                <img [src]="movie?.cover" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <p>Rate this movie</p>
+            <div class="form-group">
+                <label for="uname">Name</label>
+                <input type="text" name="uname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating<span>
+                        <ngb-rating [max]="5" [readonly]="false"></ngb-rating>
+                    </span></label>
+            </div>
+            <div class="form-group">
+                <label for="review">Rewiew</label>
+                <textarea name="review" id="" cols="30" rows="5" class="form-control"></textarea>
+            </div>
+            <button class="btn btn-dark">Submit</button>
+        </div>
+    </div>
+    <div class="bottom">
+        <h1 class="title">Reviews</h1>
+        <div class="reviews-form" *ngFor="let review of movie?.reviews">
+            <div class="review-detail" *ngIf="movie?.reviews?.length > 0">
+                <div class="review-left">
+                    <h2>{{review.author}}</h2>
+                    <p>{{review.published_on | date : 'mediumDate'}} </p>
+                </div>
+                <div class="review-medium">"{{review.review}}"</div>
+                <div class="review-right">
+                    <ngb-rating [rate]="review.rating"></ngb-rating>
+                    <span>{{review.rating}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="review-message" *ngIf="movie?.reviews?.length === 0">No rewiews yet</div>
+    </div>
+</div>

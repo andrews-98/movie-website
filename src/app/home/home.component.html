@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="home-container">
+    <div class="all_movies">
+        <div class="trending_movies">
+            <div class="top">
+                <h1>Trending Movies</h1>
+                <div class="view">View All</div>
+            </div>
+
+            <div class="movie">
+                <div class="movie_display" *ngFor="let movie of trendingMovie">
+                    <div class="cover"(click)="goToMoviePage('trending', movie.id)">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="name">{{movie.name}}</div>
+                        <div class="rating">
+                            <ngb-rating [rate]="movie.rating"></ngb-rating>
+                            <span>{{movie.rating}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theatr_movies">
+            <div class="top">
+                <h1>Now in cinema</h1>
+                <div class="view">View All</div>
+            </div>
+            <div class="movie">
+                <div class="movie_display" *ngFor="let movie of theatreMovie">
+                        <div class="cover" (click)="goToMoviePage('theatre', movie.id)">
+                            <img [src]="movie.cover" alt="">
+                        </div>
+                        <div class="detail">
+                            <div class="name">{{movie.name}}</div>
+                            <div class="rating">
+                                <ngb-rating [rate]="movie.rating"></ngb-rating>
+                                <span>{{movie.rating}}</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="popular_movies">
+        <h1>Top Movies</h1>
+
+        <div class="movie_dashboard" *ngFor="let movie of popularmovies">
+            <div class="movie_dashboard_name" (click)="goToMoviePage('top', movie.id)">{{movie.name}}</div>
+            <div class="movie_dashboard_detail">
+                <div class="rating">
+                    <ngb-rating [rate]="movie.rating"><</ngb-rating>
+                    <span>{{movie.rating}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="view">View All</div>
+
+    </div>
+
+</div>

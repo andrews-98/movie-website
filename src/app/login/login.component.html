@@ -1,0 +1,36 @@
+<div class="login-container">
+
+    <div class="form-content">
+        <img [src]="img">
+
+        <div class="form-content_login-form">
+            <small>{{ errMsg }}</small>
+            <div class="login_form_form-group">
+                <label for="uname">Username</label>
+                <input type="text" name="uname"  placeholder="Enter Your name" [(ngModel)]="username"/>
+            </div>
+            <div class="login_form_form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Password"  [(ngModel)]="password"/>
+            </div>
+            <button class="btn" (click)="login()">Log In</button>
+        </div>
+        .
+    </div>
+
+    <div class="text-content">
+        <div class="text-content_logo">WatchMovie Service</div>
+        <div class="text-content_desc">WatchMovie Service are the world’s most trusted recommendation resources
+            for quality entertainment. As the leading online aggregator of movie and TV show reviews from critics, we
+            provide fans with a comprehensive guide to what’s Fresh – and what’s Rotten – in theaters and at home. We
+            also
+            serve movie and TV fans with original editorial content on our site
+            and through social channels, produce fun and informative video series, and hold live events for fans across
+            the
+            country, with our ‘Your Opinion Sucks’ live shows. If you’re an entertainment fan looking for a
+            recommendation,
+            or to share an opinion, you’ve come to the right place.</div>
+    </div>
+
+
+</div>

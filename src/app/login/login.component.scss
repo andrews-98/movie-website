@@ -1,0 +1,100 @@
+.login-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0.30turn, #483ece, #ebf8e1, #f7f305);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    .form-content {
+        width: 700px;
+        text-align: center;
+
+        img {
+            max-width: 400px;
+            min-height: 400px;
+
+        }
+
+        .form-content_login-form {
+            width: 500px;
+            height: 230px;
+            background-color: #181414;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 15px 10px 20px #181414;
+
+            .login_form_form-group {
+
+                text-align: left;
+
+
+                label {
+                    font-size: 19px;
+                    display: block;
+                    color: white;
+                    font-family: cursive;
+
+                }
+
+                input {
+                    width: 100%;
+                    font-size: 15px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    outline: none;
+                    font-weight: bold;
+                }
+
+
+            }
+
+            .btn {
+                margin-top: 10px;
+                background: linear-gradient(0.30turn, #fff, #dfdf00);
+                font-size: 15px;
+                font-weight: bold;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background: linear-gradient(0.50turn, #fff, #f3f300);
+            }
+
+            small {
+                color: red;
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    .text-content {
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .text-content_logo {
+        max-width: 550px;
+        font-size: 70px;
+        font-weight: bold;
+        font-family: 'Bowlby One SC', cursive;
+        text-align: center;
+    }
+
+    .text-content_desc {
+        max-width: 750px;
+        font-size: 23px;
+        font-family: cursive;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 10px;
+
+    }
+}

@@ -1,0 +1,129 @@
+.home-container {
+    width: 100%;
+    display: flex;
+    font-family: 'Fjalla One', sans-serif;
+
+
+    .all_movies {
+        width: 75%;
+        min-height: calc(100vh - 100px);
+        border-right: 1px solid #0a138b;
+        padding: 20px 40px;
+        font-family: 'Fjalla One', sans-serif;
+
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+
+            h1 {
+                font-size: 28px;
+                border-left: 4px solid #fbff03;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding-left: 5px;
+            }
+
+            .view {
+                cursor: pointer;
+                color: #000;
+                transition: .1s linear;
+            }
+
+            .view:hover {
+                color: #d0d32c;
+            }
+        }
+
+        .movie {
+            display: flex;
+            justify-content: space-between;
+
+            .movie_display {
+                width: 145px;
+                margin-bottom: 15px;
+
+                .cover {
+                    img {
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                    img:hover {
+                        opacity: 0.9;
+                    }
+                }
+
+                .detail {
+                    .name {
+                        height: 50px;
+                        font-weight: bold;
+                    }
+
+                    .rating{
+                        font-size: 18px;
+                        span{
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .popular_movies {
+        width: 25%;
+        min-height: calc(100vh - 100px);
+        padding: 20px 20px;
+        font-family: 'Fjalla One', sans-serif;
+
+        h1 {
+            font-size: 28px;
+            border-left: 4px solid #fbff03;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding-left: 5px;
+            margin-bottom: 20px;
+        }
+
+        .view {
+            cursor: pointer;
+            color: #000;
+            float: right;
+            transition: .1s linear;
+        }
+
+        .view:hover {
+            color: #d0d32c;
+        }
+
+        .movie_dashboard {
+            display: flex;
+            justify-content: space-between;
+
+            .movie_dashboard_name {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 35px;
+                cursor: pointer;
+            }
+
+            .movie_dashboard_name:hover {
+                text-decoration: underline
+            }
+
+            .movie_dashboard_detail {
+                .rating {
+                    span {
+                        font-size: 14px;
+                        padding-left: 3px;
+
+                    }
+                }
+            }
+        }
+    }
+
+}
